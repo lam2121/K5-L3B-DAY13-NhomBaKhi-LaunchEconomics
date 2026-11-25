@@ -24,7 +24,7 @@ Nhóm xây dựng bộ **hồ sơ launch v0** cho trợ lý hoàn phí của cô
 - **Độ nhạy & giới hạn chạy lại (`bang_chi_phi.md`):** Ba yếu tố nhạy nhất (`simulated`): (1) số ca làm lại (`+51,8% / −25,9%`), (2) tỉ lệ xem lại (`+40,7% / −20,3%`), (3) lương nhân viên (`+23,1%`). Giới hạn `2` lần chạy tối ưu chi phí cả hệ thống (`6.901.220 đ`, `simulated`) so với `1` lần (`7.449.781 đ`) và `3` lần (`7.037.585 đ`). Nếu phải xem lại 100% trong phạm vi pilot, CPS tăng lên `11.743 đ = 0,98×` (9 phút làm lại) hoặc `12.415 đ = 1,03×` ở mức thực tế `15,3` phút/ca (`simulated`).
 - **Lỗi, chỉ số & thiết kế pilot:** Đồng thuận ban đầu 20 ca là `15/20 = 75%`, sau khi viết lại định nghĩa nguyên nhân gốc đã thống nhất `20/20`. Chỉ số trong đợt chạy thử (chưa có đối chứng): chính `82,83%` (`994/1.200`), bỏ qua gợi ý `27,12%` (`48/177`), mở lại 7 ngày `4,25%` (`51/1.200`; trong phạm vi pilot `3,97%`). Thiết kế pilot chia theo nhân viên (`20 + 20` cụm tại 12 depot), đánh đổi nới MDE lên `6` điểm (`n = 859/nhóm`, `m ≥ 299`, `DE = 6,96`, power giảm còn `0,642` nếu tác động thật là 5 điểm).
 - **Đề xuất cuối (`ho_so_launch_v0.md`):** **Go có điều kiện** cho pilot phạm vi `noi_dia + hang_nang` (giới hạn `2` lần chạy) kèm 4 điều kiện bắt buộc về sửa lỗi ca `20` & ca `7`, ký chấp nhận đánh đổi thống kê, bật đủ `10` event đo thật sau tuần 1 và lộ trình giảm xem lại theo bậc (`≤ 4,8` phút/lần).
-- **Kết quả duyệt chéo Gate 2a:** *(Cập nhật sau phiên chấm chéo lúc 17:00 cùng [phieu_cham.md](phieu_cham.md)).*
+- **Kết quả duyệt chéo Gate 2a:** Nhóm đã hoàn thành phần trình bày qua [bao_cao_gate2a_NhomBaKhi.html](../bao_cao_gate2a_NhomBaKhi.html) và thực hiện vai trò hội đồng chấm chéo cho **Nhóm Dota (Lớp L3B)** trong [phieu_cham.md](phieu_cham.md) (`30 / 30` điểm, đề xuất `Go có điều kiện` kèm 5 góp ý chỉnh sửa); điểm đánh giá ngược từ hội đồng chấm `NhomBaKhi` theo ghi nhận tổng hợp của giảng viên/lớp.
 
 ## 5. Khó khăn và cách xử lý
 
@@ -45,7 +45,7 @@ Chi tiết phân công và bằng chứng nằm trong [TEAM.md](../../TEAM.md); 
 
 - Thời gian xem lại và làm lại hiện dùng cột giả lập (`_simulated`), cần thay bằng dữ liệu đo thật từ `staff_review_decision` và `staff_rework_completed` sau tuần đầu của pilot.
 - Dữ liệu chạy thử trước đó không có nhóm đối chứng nên chỉ mô tả được hiện trạng (`82,83%`), chưa kết luận được hiệu quả nhân quả trước khi chạy pilot đối chứng.
-- Cần hoàn tất [phieu_cham.md](phieu_cham.md) sau phiên duyệt chéo Gate 2a và điền `commit chốt` trong [TEAM.md](../../TEAM.md) ở lần push cuối cùng.
+- Nhóm đã hoàn tất đủ 6 file hồ sơ và [phieu_cham.md](phieu_cham.md) sau phiên duyệt chéo Gate 2a; tiếp tục rà soát trước deadline `23h59 GMT+7`, push bản cuối lên nhánh `main` và nộp link repo lên LMS cho đủ 4 thành viên.
 
 ## 8. Tài liệu tham khảo
 

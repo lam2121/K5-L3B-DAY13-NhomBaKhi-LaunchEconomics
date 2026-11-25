@@ -5,7 +5,7 @@
 - Tên nhóm: NhomBaKhi
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-DAY13-NhomBaKhi-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: https://github.com/lam2121/K5-L3B-DAY13-NhomBaKhi-LaunchEconomics, main
+- URL repo, nhánh nộp, commit chốt: https://github.com/lam2121/K5-L3B-DAY13-NhomBaKhi-LaunchEconomics, nhánh `main`, commit mới nhất trên `main` trước 23h59 GMT+7 (mốc Gate 2a đã xác nhận: `40f5298`)
 
 ## Thành viên
 
@@ -45,11 +45,11 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
-- Khởi tạo/cập nhật thông tin nhóm và phân vai trong `TEAM.md`; tự gắn nhãn độc lập 20 ca lỗi (cột `Nhãn người 2`, đồng thuận ban đầu `15/20 = 75%`, thống nhất `20/20` cùng định nghĩa viết lại và bảng 5 ca khắc phục); tổng hợp CP1–CP3 vào `report/team/ho_so_launch_v0.md` và rà soát xung đột, kiểm tra chạy `src/lab13.py`, YAML và quy tắc nộp bài trước Gate 2a.
+- Khởi tạo/cập nhật thông tin nhóm và phân vai trong `TEAM.md`; tự gắn nhãn độc lập 20 ca lỗi (cột `Nhãn người 2`, đồng thuận ban đầu `15/20 = 75%`, thống nhất `20/20` cùng định nghĩa viết lại và bảng 5 ca khắc phục); tổng hợp CP1–CP3 vào `report/team/ho_so_launch_v0.md`; rà soát xung đột, kiểm tra chạy `src/lab13.py`, YAML và quy tắc nộp bài; tổng hợp `report/team/group_report.md`, dựng slide `report/bao_cao_gate2a_NhomBaKhi.html` và hoàn thiện phiếu chấm chéo Gate 2a (`report/team/phieu_cham.md`).
 
 ### Bằng chứng
 
-- Các commit `1434e29`, `ca84383`, `326a9f1`, `b97eef9`; [Bảng lỗi CP3](report/team/bang_loi.md), [Hồ sơ launch v0](report/team/ho_so_launch_v0.md) và [báo cáo cá nhân](report/team/2A202604115_NguyenVanLam.md).
+- Các commit `1434e29`, `ca84383`, `326a9f1`, `b97eef9`, `d9d1961`, `40f5298`; [Bảng lỗi CP3](report/team/bang_loi.md), [Hồ sơ launch v0](report/team/ho_so_launch_v0.md), [Báo cáo nhóm](report/team/group_report.md), [Phiếu chấm hội đồng](report/team/phieu_cham.md) và [báo cáo cá nhân](report/team/2A202604115_NguyenVanLam.md).
 
 ## NguyenDuyHung-2A202604110
 
