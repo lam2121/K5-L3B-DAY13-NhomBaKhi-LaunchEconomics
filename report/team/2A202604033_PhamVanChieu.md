@@ -17,7 +17,7 @@
 ## 3. Đóng góp cụ thể
 
 - Duyệt bộ 20 nhãn tham khảo có hỗ trợ AI và ghi kết quả đối chiếu với bộ nhãn Nguyễn Văn Lâm đã công bố.
-- Chuẩn bị quy tắc thảo luận cho 5 ca lệch và bản nháp cách khắc phục cho 5 ca thuộc 5 loại lỗi. Hai người sẽ xác nhận sau khi trao đổi.
+- Chuẩn bị quy tắc cho 5 ca lệch và cùng Nguyễn Văn Lâm chốt nhãn thống nhất, duyệt bảng khắc phục cho 5 loại lỗi.
 
 ## 4. Bằng chứng
 
