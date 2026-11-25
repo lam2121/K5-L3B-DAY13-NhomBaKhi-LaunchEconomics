@@ -1,6 +1,4 @@
-# Báo cáo cá nhân — NguyenDuyHung
-
-> Lưu ý nộp bài: Đổi tên file thành `<MSSV>_NguyenDuyHung.md` (theo quy tắc `report/team/MSSV_HoTen.md` trong `SUBMISSION.md`) sau khi điền MSSV. Giữ nguyên file mẫu `MSSV_HoTen.md`.
+# Báo cáo cá nhân — 2A202604110_NguyenDuyHung
 
 ## 1. Thông tin thành viên
 
@@ -12,10 +10,11 @@
 
 ## 2. Phần việc phụ trách
 
-- Kiểm số độc lập cho code tính toán trong `src/lab13.py`, đối chiếu công thức và số liệu với tài liệu `docs/du_lieu_va_cong_thuc.md`.
+- Kiểm số độc lập cho code tính toán trong `src/lab13.py`, đối chiếu công thức và số liệu với `docs/du_lieu_va_cong_thuc.md`.
 - Điền, kiểm chứng và hoàn thiện toàn bộ bảng số liệu và câu trả lời ở Nhiệm vụ A (A1–A4) và Nhiệm vụ B (B1–B4) trong `report/team/bang_chi_phi.md`.
-- Kiểm soát tuân thủ quy tắc của lab: gắn nhãn `simulated` cho mọi số liệu tính từ các cột `_simulated`, câu trả lời $\le 3$ dòng có số liệu, không chứa từ cấm trong hồ sơ.
-- (Tiếp theo ở CP3–CP5): Hỗ trợ kiểm tra đồng thuận/quy tắc bảng lỗi (`bang_loi.md`), kiểm chứng cỡ mẫu & tính hợp lệ của `pilot_plan.yaml`, đối chiếu chỉ số/rủi ro (`chi_so.md`), soát hồ sơ `ho_so_launch_v0.md` và chạy kiểm thử `src/lab13.py` trên máy thứ hai.
+- Rà soát, kiểm số đồng thuận và bổ sung định nghĩa viết lại / độ đo cho bảng lỗi CP3 (`report/team/bang_loi.md`).
+- Hoàn thiện và kiểm chứng kế hoạch pilot CP4 (`report/team/pilot_plan.yaml`) cùng đặc tả chỉ số, event, rủi ro và hồ sơ launch v0 CP5 (`report/team/chi_so.md`, `report/team/ho_so_launch_v0.md`).
+- Kiểm soát tuân thủ quy tắc của lab: gắn nhãn `simulated` cho mọi số liệu từ các cột `_simulated`, câu trả lời $\le 3$ dòng có số liệu, không sử dụng từ cấm trong hồ sơ.
 
 ## 3. Đóng góp cụ thể
 
@@ -27,20 +26,28 @@
   - Kiểm chứng 9 kịch bản B1 bằng tính đối xứng (mức giảm khi giảm một nửa bằng đúng 1/2 mức tăng khi gấp đôi) và kiểm tra tính cộng tuyến tính ở B2 (`Token x2 + Xem lại x2 = 6.543 đ`, `+46,3%`, `simulated`).
   - Đối chiếu bài toán tối ưu chi phí cả hệ thống B3: xác nhận giới hạn `2 lần` rẻ nhất cho công ty (`6.901.220 đ`, `simulated`), khác với giới hạn `1 lần` cho CPS thấp nhất (`4.111 đ`, `simulated`, đẩy thêm `85` ca sang nhân viên).
   - Kiểm chứng B4 (`noi_dia` + `hang_nang` xem lại 100%) ở cả hai mức phút làm lại (`9 phút`: `11.743 đ = 0,98×`; trung bình thực tế `15,3 phút`: `12.415 đ = 1,03×`, `simulated`) và tính mức hoà vốn thời gian xem lại (`≤ 5,1 phút` và `≤ 4,8 phút`).
+- **CP3 — Kiểm tra & hoàn thiện Nhiệm vụ C (`bang_loi.md`):**
+  - Kiểm đếm lại tỉ lệ đồng thuận giữa hai bộ nhãn (`15/20 = 75%`, giữ nguyên hai cột nhãn độc lập theo đúng quy định `RULES.md`).
+  - Bổ sung mục định nghĩa đã viết lại theo nguyên nhân gốc (bắt buộc khi đồng thuận `< 80%`) và chuẩn hoá cách phát hiện có event, `trace_id`, ngưỡng và tần suất đo cụ thể cho bảng khắc phục 5 ca.
+- **CP4 — Hoàn thiện & kiểm chứng `pilot_plan.yaml`:**
+  - Điền đầy đủ 5 câu cỡ mẫu D1 (`1.251`, `3.103`, trần `1.000`, trần `300`, `859` ở MDE `0,06` với `m >= 299`, `DE = 6,96`), 5 câu kiểm tra tách tác động D2, đánh đổi power (`0,642` ở mức 5 điểm), ngưỡng an toàn theo nền thực tế (`4,25%` toàn mẫu; `3,97%` phạm vi `noi_dia + hang_nang`), và 3 luật dừng đủ 4 vế `NẾU – TRONG – THÌ – KHÔNG THÌ`.
+  - Tự chạy kiểm tra `yaml.safe_load` (`YAML OK, rules: 3`), quét dấu `?` ngoài chú thích và từ cấm, tính kiểm chứng `mo_lai scope = 3,97 %` và `power at 5pt = 0,642` bằng `statsmodels`, đồng thời rà soát chéo toàn dự án để chỉnh lại Luật dừng 2 và `scope` cho nhất quán với giới hạn 2 lần chạy.
+- **CP5 — Hoàn thiện `chi_so.md` và `ho_so_launch_v0.md`:**
+  - Điền đặc tả chỉ số E1 (`82,83%`, `27,12%`, `4,25%` và 2 chỉ số tự đề xuất), 10 event có `trace_id` kèm bảng kiểm tra chéo và 3 dòng rủi ro kinh tế E2 lấy số trực tiếp từ `bang_chi_phi.md`.
+  - Hoàn thiện mục 4–7 và đề xuất cuối `Go có điều kiện` (nêu thẳng các con số bất lợi kèm 4 điều kiện có người phụ trách và hạn kiểm tra) trong `report/team/ho_so_launch_v0.md`.
 
 ## 4. Bằng chứng
 
-- File báo cáo chi phí đã hoàn thiện A1–A4 và B1–B4: `report/team/bang_chi_phi.md`.
-- Các commit đã đẩy lên nhánh `main` cho phần Nhiệm vụ A và B: `3919c20` (`bangchiphi`), `97dc3d6` (`nhiem vu b`).
-- Kết quả chạy kiểm chứng `src/lab13.py` và đối chiếu độc lập bằng Python trên `src/logix_runs.csv` và `src/logix_requests.csv`.
+- Các file hồ sơ đã cập nhật/hoàn thiện: `report/team/bang_chi_phi.md`, `report/team/bang_loi.md`, `report/team/pilot_plan.yaml`, `report/team/chi_so.md`, `report/team/ho_so_launch_v0.md`.
+- Các commit đã đẩy lên nhánh `main`: `3919c20` (`bangchiphi`), `97dc3d6` (`nhiem vu b`), `c1b8c8b` (`canhan`), `12feb89` (đổi tên file cá nhân theo MSSV).
+- Kết quả chạy kiểm chứng trực tiếp trên máy cá nhân: `python lab13.py` (đạt 3/3 phép thử A1), `yaml.safe_load` (`YAML OK, rules: 3`), `mo_lai scope: 3.97 %`, `power at 5pt: 0.642`.
 
 ## 5. Công cụ AI đã dùng
 
 - **Công cụ:** Antigravity (trợ lý AI).
-- **Mục đích sử dụng:** Hỗ trợ viết script Python đối chiếu độc lập số liệu từ hai file CSV, tính mức hoà vốn B4 và tỉ lệ `ok` theo `attempt` ở A3, và rà soát định dạng/nhãn `simulated` khi điền `report/team/bang_chi_phi.md`.
-- **Cách tự kiểm tra:** Đối chiếu từng kết quả với đầu ra của `src/lab13.py`, kiểm tra quy tắc đối xứng của 9 kịch bản B1, kiểm tra chênh lệch làm tròn giữa tổng thành phần và CPS, và quét từ cấm trước khi cập nhật báo cáo.
+- **Mục đích sử dụng:** Hỗ trợ viết lệnh/script Python đối chiếu độc lập số liệu từ hai file CSV, tính mức hoà vốn B4, tỉ lệ `ok` theo `attempt` ở A3, kiểm tra nhất quán giữa `pilot_plan.yaml` và các file hồ sơ, và rà soát định dạng/nhãn `simulated`.
+- **Cách tự kiểm tra:** Đối chiếu từng kết quả với đầu ra của `src/lab13.py`, kiểm tra quy tắc đối xứng của 9 kịch bản B1, tự chạy các lệnh PowerShell kiểm tra `yaml.safe_load`, `statsmodels` (`NormalIndPower`), kiểm tra không còn dấu `?` ngoài chú thích và không có từ cấm trong `report/team/`.
 
 ## 6. Tự đánh giá
 
-- Hoàn thành đúng tiến độ phần việc của Người kiểm số đến hết CP1 & CP2 trước khi chuyển sang CP3.
-- Sẽ bổ sung MSSV, đổi tên file theo đúng định dạng `<MSSV>_NguyenDuyHung.md` và cập nhật thêm phần đóng góp CP3–CP5 trước khi nộp bài cuối buổi.
+- Hoàn thành đầy đủ vai trò **Người kiểm số (Thành viên 2)** từ CP1 đến CP5, đảm bảo tính khớp nối số liệu (sai số $\le 2\%$), nhãn `simulated` đầy đủ và tính nhất quán giữa code, kế hoạch pilot và hồ sơ launch v0 trước buổi duyệt chéo Gate 2a.
