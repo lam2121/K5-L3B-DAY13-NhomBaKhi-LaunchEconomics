@@ -87,8 +87,8 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Duyệt bộ nhãn tham khảo, đối chiếu 20 ca với Người gắn nhãn 2 và chuẩn bị bản nháp quy tắc phân biệt cùng bảng khắc phục CP3.
 
 ### Bằng chứng
 
--
+- [Bảng lỗi CP3](report/team/bang_loi.md) và [báo cáo cá nhân](report/team/2A202604033_PhamVanChieu.md).
