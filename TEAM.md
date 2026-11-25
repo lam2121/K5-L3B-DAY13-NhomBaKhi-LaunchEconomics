@@ -96,4 +96,5 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Commit `0d77751`: Document CP3 label comparison and individual report.
 - Commit `c621ea6`: Finalize agreed CP3 labels and mitigations.
+- Commit `5a39fac`: Update individual report (`2A202604033_PhamVanChieu.md`), member contact info and CP3 wording.
 - [Bảng lỗi CP3](report/team/bang_loi.md) và [Báo cáo cá nhân](report/team/2A202604033_PhamVanChieu.md).

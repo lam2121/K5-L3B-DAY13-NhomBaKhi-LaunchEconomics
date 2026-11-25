@@ -9,23 +9,36 @@
 
 ## 2. Phần việc phụ trách
 
-- Trưởng nhóm: thiết lập repo nhóm `K5-L3B-DAY13-NhomBaKhi-LaunchEconomics`, điều phối phân công và kiểm tra tiến độ các checkpoint.
-- Người giữ hồ sơ: tổng hợp và cập nhật 7 mục vào `report/team/ho_so_launch_v0.md` theo từng checkpoint, rà soát quy tắc nhãn `simulated` và quy tắc trình bày.
-- Người gắn nhãn 2 (CP3): gắn nhãn độc lập 20 ca lỗi theo 5 loại của Google PAIR, đối chiếu đồng thuận với Người gắn nhãn 1 và hoàn thiện `report/team/bang_loi.md`.
+- Trưởng nhóm: quản lý repo nhóm `K5-L3B-DAY13-NhomBaKhi-LaunchEconomics`, điều phối phân công và theo dõi tiến độ các checkpoint.
+- Người giữ hồ sơ: tổng hợp và cập nhật dần 7 mục vào `report/team/ho_so_launch_v0.md`, kiểm soát nhãn `simulated`, quy tắc 5 của lab (chỉ duyệt kế hoạch pilot, không duyệt chạy chính thức) và vai trò phụ trách.
+- Người gắn nhãn 2 (CP3): tự đọc và gắn nhãn độc lập 20 ca lỗi theo 5 loại Google PAIR, đối chiếu đồng thuận với Người gắn nhãn 1, viết quy tắc phân biệt và hoàn thiện `report/team/bang_loi.md`.
 
 ## 3. Đóng góp cụ thể
 
-- (Tự điền sau khi hoàn thành CP1–CP5: các phần bạn trực tiếp làm trong `TEAM.md`, `report/team/bang_loi.md`, `report/team/ho_so_launch_v0.md`, tham gia kiểm tra CP4/CP5 và chấm chéo `report/team/phieu_cham.md`)
+- **Tổ chức nhóm & repo (`TEAM.md`):** Khởi tạo thông tin nhóm `NhomBaKhi`, lớp `L3B`, bảng phân công 4 thành viên, nhân bản mục cá nhân cho từng thành viên và đồng nhất email nộp bài (`26ai.lamnv@vinuni.edu.vn`).
+- **Giữ hồ sơ CP1 & CP2 (`report/team/ho_so_launch_v0.md`):** Đối chiếu đầu ra từ `src/lab13.py` và `report/team/bang_chi_phi.md` để cập nhật Mục 1 (*Chi phí mỗi việc thành công*: `4.472 đ/việc`, gấp `16,3×` hoá đơn `274,7 đ`, phạm vi `noi_dia + hang_nang` có cố định `4.599 đ` ở 45k yc / `5.784 đ` ở nửa khối lượng, `simulated`), Mục 2 (*Ba yếu tố nhạy nhất*: làm lại `+51,8% / −25,9%`, xem lại `+40,7% / −20,3%`, lương NV `+23,1%`, `simulated`), và Mục 3 (*So với nhân viên tự làm*: cả hệ thống `5.865 đ = 0,49×`, phạm vi pilot `0,38× / 0,48×`, rủi ro B4 xem lại 100% lên `11.743 đ = 0,98×` hoặc `12.415 đ = 1,03×`, `simulated`).
+- **Gắn nhãn lỗi CP3 (`report/team/bang_loi.md` & Mục 5 `ho_so_launch_v0.md`):** Tự gắn nhãn độc lập 20 ca lỗi trước khi trao đổi (cột `Nhãn người 2`); đối chiếu với Người gắn nhãn 1 (`Phạm Văn Chiêu`) đạt đồng thuận ban đầu `15/20 = 75%` (lệch ở các ca `3, 6, 8, 9, 13`); cùng thống nhất 5 ca lệch về đúng nguyên nhân gốc (`20/20` khớp cuối cùng), bổ sung định nghĩa viết lại và bảng khắc phục 5 ca (`1, 7, 16, 11, 5`), rồi cập nhật Mục 5 vào `report/team/ho_so_launch_v0.md`.
+- **Rà soát chéo toàn bộ hồ sơ trước Gate 2a:** Kiểm tra xung đột Git, chạy kiểm chứng `src/lab13.py` (3 phép thử A1 đạt `1,20 · 1,25 · 1,25`), kiểm tra `pilot_plan.yaml` bằng `yaml.safe_load` (hợp lệ, không còn `?` ngoài chú thích), rà từ cấm theo quy tắc 5 của `README.md`, sửa lỗi hiển thị mũi tên `$\rightarrow$` → `→` ở Mục 7 `ho_so_launch_v0.md`, và rà lại diễn đạt dòng 7 của `bang_loi.md`.
 
 ## 4. Bằng chứng
 
-- `TEAM.md`: cập nhật thông tin nhóm `NhomBaKhi`, lớp `L3B`, bảng thành viên và mục cá nhân.
-- (Bổ sung sau khi hoàn thành: mã commit Git, tỉ lệ đồng thuận và bảng khắc phục trong `report/team/bang_loi.md`, nội dung cập nhật trong `report/team/ho_so_launch_v0.md`)
+- `1434e29`: điền `TEAM.md`, tạo `report/team/2A202604115_NguyenVanLam.md`, ghi 20 nhãn độc lập vào cột `Nhãn người 2` trong `report/team/bang_loi.md`, cập nhật tên nhóm/lớp ở `report/team/ho_so_launch_v0.md`.
+- `ca84383`: điền Mục 1, 2, 3 (CP1 và CP2) trong `report/team/ho_so_launch_v0.md`.
+- `326a9f1`: cập nhật Mục 5 (CP3) trong `report/team/ho_so_launch_v0.md` và cập nhật email liên hệ.
+- `b97eef9`: đồng nhất email trong `TEAM.md`, chỉnh lại dòng 7 trong `report/team/bang_loi.md` và sửa ký hiệu `→` ở Mục 7 `report/team/ho_so_launch_v0.md`.
+- *(Sẽ bổ sung thêm mã commit chốt sau khi nhóm hoàn thành `report/team/phieu_cham.md` ở phiên duyệt chéo Gate 2a và `report/team/group_report.md`.)*
 
 ## 5. Công cụ AI đã dùng
 
-- (Tự điền: tên công cụ AI đã dùng, mục đích như giải thích khái niệm/quy trình/soát lỗi/tạo khung file, và cách bạn tự kiểm tra lại kết quả trước khi chốt)
+- **Công cụ:** Trợ lý AI trong IDE (Antigravity / Gemini).
+- **Mục đích sử dụng:** Giải thích vai trò và quy trình từng checkpoint; tạo khung `TEAM.md` và báo cáo cá nhân; kiểm tra đối chiếu bộ 20 nhãn lỗi **sau khi đã tự gắn độc lập** và giải thích nguyên nhân gốc cho 5 ca lệch (`3, 6, 8, 9, 13`); tóm tắt số liệu đã có vào `ho_so_launch_v0.md` và rà soát xung đột/quy tắc trình bày giữa các file nhóm.
+- **Cách tự kiểm tra:**
+  - Tự đọc 20 ca trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx` và gắn nhãn độc lập trước; giữ nguyên bộ nhãn ban đầu (`15/20 = 75%`) ở cột `Nhãn người 2` khi đối chiếu với Người gắn nhãn 1.
+  - Tự chạy lại `python lab13.py` trong `src/` để đối chiếu từng con số với `bang_chi_phi.md`, `chi_so.md`, `ho_so_launch_v0.md` (`4.472 đ`, `16,3×`, `5.865 đ = 0,49×`, `12.415 đ = 1,03×`, `82,83%`, `27,12%`, `4,25%`).
+  - Kiểm tra `yaml.safe_load` trên `pilot_plan.yaml` và quét kiểm tra quy tắc 5 của `README.md` cùng nhãn `simulated` trên toàn bộ `report/team/`.
 
 ## 6. Tự đánh giá
 
-- (Tự điền cuối buổi: mức độ hoàn thành vai trò, điểm làm tốt, hạn chế cần rút kinh nghiệm)
+- **Điểm làm tốt:** Hoàn thành đúng vai trò Trưởng nhóm và Người giữ hồ sơ; cập nhật hồ sơ cuốn chiếu theo từng checkpoint, chủ động phát hiện và xử lý các lỗi xung đột định dạng/nhất quán trước phiên duyệt chéo Gate 2a.
+- **Hạn chế và bài học:** Khi gắn nhãn độc lập CP3 đạt `15/20 = 75%` (lệch 5 ca `3, 6, 8, 9, 13` do nhầm giữa cách trợ lý phản hồi với nguyên nhân gốc ở đầu vào/phạm vi/lỗi đã lộ ra). Sau khi viết lại định nghĩa phân loại cùng Người gắn nhãn 1 đã hiểu rõ và thống nhất chính xác `20/20` ca.
+- **Việc còn lại cuối buổi:** Tham gia phiên duyệt chéo Gate 2a (hoàn thiện `report/team/phieu_cham.md` và cập nhật kết quả hội đồng vào mục 4 của `report/team/group_report.md`), rồi cập nhật `commit chốt` ở `TEAM.md` trước khi nộp link repo lên LMS.
