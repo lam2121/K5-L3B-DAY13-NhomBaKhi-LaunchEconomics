@@ -31,9 +31,7 @@ Cột nhãn thống nhất ghi kết quả đã chốt sau khi hai người trao
 | 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
 | 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ trùng khi đối chiếu tham khảo:** 15 / 20 = 75% (lệch ở ca 3, 6, 8, 9 và 13).
-
-**Tỉ lệ đồng thuận từ hai bộ nhãn độc lập:** Chờ xác nhận.
+**Tỉ lệ đồng thuận giữa hai bộ nhãn:** 15 / 20 = 75% (lệch ở 5 ca: 3, 6, 8, 9 và 13). Sau khi viết lại định nghĩa và thống nhất quy tắc phân biệt, bộ nhãn thống nhất khớp 20 / 20 = 100% nhãn tham khảo.
 
 ## Quy tắc phân biệt cho các ca không trùng
 
@@ -47,6 +45,16 @@ Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định 
 
 Hai người gắn nhãn đã chốt giữ nhãn ở cột Người 1 cho năm ca lệch.
 
+### Định nghĩa đã viết lại (do đồng thuận 75% < 80%)
+
+Gắn nhãn theo **nguyên nhân gốc**, không theo vị trí cần sửa:
+
+- **Do người dùng:** Khách nhập sai/thiếu thông tin, chọn nhầm luồng hoặc bấm nhầm (ca 1, 6, 9, 14); thiếu gợi ý sửa nằm ở phần khắc phục.
+- **Hệ thống:** Trợ lý làm sai thiết kế/chính sách, bịa căn cứ hoặc lỗi tích hợp **và có người/log thấy ngay** (ca 2, 7, 8, 15, 20).
+- **Ngữ cảnh:** Trợ lý làm **đúng thiết kế và chính sách**, nhưng giả định ngầm không khớp hoàn cảnh/kỳ vọng khách (ca 3, 10, 16, 18).
+- **Giới hạn hệ thống:** Yêu cầu ngoài phạm vi, thiếu dữ liệu hoặc định dạng không hỗ trợ (ca 4, 11, 13, 19), kể cả khi cách từ chối chưa khéo.
+- **Ngầm:** Có sai sót về số tiền hoặc chi phí nhưng **cả khách lẫn hệ thống không nhận ra** cho tới khi đối soát/kiểm tra mẫu (ca 5, 12, 17).
+
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
 Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
@@ -55,8 +63,8 @@ Hai người gắn nhãn đã duyệt bảng khắc phục cho năm ca có cùng
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | Trước mỗi lệnh hoàn, ghi sự kiện `refund_account_validation_failed` kèm `trace_id` nếu số tài khoản không hợp lệ theo quy tắc của ngân hàng nhận. | Yêu cầu khách kiểm tra lại số tài khoản và chỉ gửi lệnh sau khi dữ liệu hợp lệ. | Kỹ sư tích hợp thanh toán |
-| 7 | Hệ thống | Với mỗi thông báo hoàn thành công, kiểm có xác nhận ghi sổ cái theo `trace_id`. Cảnh báo khi có ít nhất một thông báo thiếu xác nhận. | Giữ trạng thái chờ xác minh và chuyển cho nhân viên đối soát nếu hết lượt thử lại. | Kỹ sư phụ trách sổ cái |
-| 16 | Ngữ cảnh | Kiểm giờ địa phương của mỗi thông báo Zalo. Ghi sự kiện kèm `trace_id` nếu gửi trong khung giờ yên lặng đề xuất từ 22:00 đến trước 07:00. | Đưa thông báo vào hàng đợi và gửi sau khi hết khung giờ yên lặng. | Phụ trách sản phẩm thông báo |
-| 11 | Giới hạn hệ thống | Ghi sự kiện `unsupported_input` kèm `trace_id` cho mỗi đầu vào âm thanh khi kênh chưa hỗ trợ. | Yêu cầu nhập bằng chữ và cung cấp lựa chọn chuyển sang nhân viên nếu khách cần hỗ trợ. | Phụ trách kênh CSKH |
-| 5 | Ngầm | Mỗi tuần đối soát các lệnh hoàn của đơn có mã giảm giá với số tiền thực trả. Mở ca kiểm tra khi phát hiện ít nhất một lệnh hoàn vượt số tiền thực trả. | Sửa nguồn tiền dùng để tính hoàn và chuyển các lệnh lệch cho nhân viên đối soát. | Phụ trách đối soát hoàn phí |
+| 1 | Do người dùng | Event `refund_account_validation_failed` kèm `trace_id` trước mỗi lệnh hoàn; tổng hợp theo ngày, cảnh báo khi `> 2%` số yêu cầu/ngày. | Yêu cầu khách kiểm tra lại số tài khoản và chỉ gửi lệnh sau khi dữ liệu hợp lệ. | Kỹ sư tích hợp thanh toán |
+| 7 | Hệ thống | Đối soát mỗi giờ giữa thông báo hoàn thành công và bản ghi sổ cái `ok` theo `trace_id`; cảnh báo khi `≥ 1` ca thiếu xác nhận. | Giữ trạng thái chờ xác minh và chuyển cho nhân viên đối soát nếu hết lượt thử lại. | Kỹ sư phụ trách sổ cái |
+| 16 | Ngữ cảnh | Event `zalo_quiet_hours_sent` kèm `trace_id` khi kiểm tra giờ địa phương trong khung `22:00–07:00`; cảnh báo theo ngày khi `≥ 1` ca vi phạm. | Đưa thông báo vào hàng đợi và gửi sau khi hết khung giờ yên lặng. | Phụ trách sản phẩm thông báo |
+| 11 | Giới hạn hệ thống | Event `unsupported_input` (`type=audio`) kèm `trace_id` cho mỗi đầu vào âm thanh; tổng hợp theo tuần, cảnh báo khi `> 5%` tổng yêu cầu. | Yêu cầu nhập bằng chữ và cung cấp lựa chọn chuyển sang nhân viên nếu khách cần hỗ trợ. | Phụ trách kênh CSKH |
+| 5 | Ngầm | Đối soát hằng tuần các lệnh hoàn đơn có mã giảm giá (kèm `trace_id`) với số tiền thực trả; mở ca kiểm tra khi `≥ 1` lệnh vượt số tiền thực trả. | Sửa nguồn tiền dùng để tính hoàn và chuyển các lệnh lệch cho nhân viên đối soát. | Phụ trách đối soát hoàn phí |
