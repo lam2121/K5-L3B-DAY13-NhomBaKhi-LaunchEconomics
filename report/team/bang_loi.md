@@ -4,7 +4,7 @@
 
 ## Đối chiếu nhãn
 
-Người gắn nhãn 1: Phạm Văn Chiêu (đã duyệt bộ nhãn có hỗ trợ AI) · Người gắn nhãn 2: Nguyễn Văn Lâm (bộ nhãn đã ghi trong repo).
+Người gắn nhãn 1: Phạm Văn Chiêu · Người gắn nhãn 2: Nguyễn Văn Lâm (bộ nhãn đã ghi trong repo).
 
 Cột nhãn thống nhất ghi kết quả đã chốt sau khi hai người trao đổi. Tỷ lệ đồng thuận chính thức cần hai bộ nhãn gốc được làm độc lập trong 8 phút.
 

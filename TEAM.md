@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Nguyễn Văn Lâm | 2A202604115 | nvl21122003@gmail.com | lam2121 | Người gắn nhãn 2, kiêm giữ hồ sơ (Trưởng nhóm) |
+|   1 | Nguyễn Văn Lâm | 2A202604115 | 26ai.lamnv@vinuni.edu.vn | lam2121 | Người gắn nhãn 2, kiêm giữ hồ sơ (Trưởng nhóm) |
 |   2 | Nguyễn Duy Hưng | 2A202604110 | nguyenduyhung101010@gmail.com | Hungnd1208 | Người kiểm số |
 |   3 | Nguyễn Trọng Khiêm | 2A202604109 | ... | ... | Người viết code |
 |   4 | Phạm Văn Chiêu | 2A202604033 | ... | ... | Người gắn nhãn 1 |
