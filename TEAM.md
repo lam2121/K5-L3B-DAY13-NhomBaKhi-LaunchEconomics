@@ -87,8 +87,13 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
-- Duyệt bộ nhãn tham khảo, đối chiếu 20 ca với Người gắn nhãn 2 và thống nhất nhãn cho các ca lệch và duyệt bảng khắc phục CP3 cùng Người gắn nhãn 2.
+- Đọc kỹ đề bài, rà soát điều kiện "Xong khi" của các checkpoint.
+- Gắn nhãn độc lập 20 ca lỗi ở CP3, đối chiếu với Người gắn nhãn 2 (đạt 15/20 ca trùng = 75%).
+- Soạn thảo và thống nhất quy tắc phân biệt cho 5 ca lệch (ca 3, 6, 8, 9, 13) và cùng chốt bảng khắc phục cho 5 loại lỗi của Google PAIR.
+- Hoàn thành báo cáo cá nhân và rà soát các tiêu chí nghiệm thu của nhóm.
 
 ### Bằng chứng
 
-- [Bảng lỗi CP3](report/team/bang_loi.md) và [báo cáo cá nhân](report/team/2A202604033_PhamVanChieu.md).
+- Commit `0d77751`: Document CP3 label comparison and individual report.
+- Commit `c621ea6`: Finalize agreed CP3 labels and mitigations.
+- [Bảng lỗi CP3](report/team/bang_loi.md) và [Báo cáo cá nhân](report/team/2A202604033_PhamVanChieu.md).

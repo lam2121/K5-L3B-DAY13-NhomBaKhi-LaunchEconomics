@@ -6,7 +6,7 @@
 
 Người gắn nhãn 1: Phạm Văn Chiêu · Người gắn nhãn 2: Nguyễn Văn Lâm (bộ nhãn đã ghi trong repo).
 
-Cột nhãn thống nhất ghi kết quả đã chốt sau khi hai người trao đổi. Tỷ lệ đồng thuận chính thức cần hai bộ nhãn gốc được làm độc lập trong 8 phút.
+Cột nhãn thống nhất ghi kết quả đã chốt sau khi hai người gắn nhãn độc lập (8 phút) rồi đối chiếu và thống nhất.
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
