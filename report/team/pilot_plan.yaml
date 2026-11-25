@@ -24,7 +24,7 @@
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"
-  scope: "Chỉ noi_dia (2.696 đ, 0,22x, simulated) và hang_nang (8.221 đ, 0,69x, simulated) tại 12 depot; loại quoc_te (22.515 đ, 1,88x, simulated) và doi_tac (10.215 đ, 0,85x, simulated)"
+  scope: "Chỉ noi_dia (2.696 đ, 0,22x, simulated) và hang_nang (8.221 đ, 0,69x, simulated) tại 12 depot, giới hạn tối đa 2 lần chạy; loại quoc_te (22.515 đ, 1,88x, simulated) và doi_tac (10.215 đ, 0,85x, simulated)"
   assignment:
     unit: "staff"
     control_share: 0.5
@@ -45,7 +45,7 @@ pilot:
     predeclared: "Đã chốt trước: chỉ số chính, MDE 0,06 (đánh đổi power ~0,64 ở mức 5 điểm), 3 luật dừng và ngày quyết định 2027-01-05"
   stop_rules:
     - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm trợ lý cao hơn đối chứng >= 2 điểm % hoặc vượt trần 6%, hoặc có >= 1 ca hoàn trùng TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành tắt cờ trợ lý trong 30 phút KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
-    - "NẾU chi phí mỗi việc thành công vượt 8.000 đ (tính bằng phút đo thật) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp phạm vi về noi_dia và giới hạn tối đa 2 lần chạy KHÔNG THÌ không được mở rộng cho hang_nang"
+    - "NẾU chi phí mỗi việc thành công vượt 8.000 đ (tính bằng phút đo thật) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí tạm dừng hang_nang để thu hẹp về noi_dia (hoặc hạ xuống tối đa 1 lần chạy nếu vẫn vượt ngưỡng) KHÔNG THÌ không được tiếp tục bật hang_nang ở các bước rollout tiếp theo"
     - "NẾU tỉ lệ bỏ qua gợi ý (sua + bo) vượt 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH phỏng vấn 5 nhân viên và rà 20 trace trong 3 ngày KHÔNG THÌ không được nâng tỉ lệ rollout"
   interim_looks: "chỉ kiểm tra chỉ số an toàn"
   rollback: "Giám đốc vận hành bấm cờ tắt hệ thống (feature flag), hiệu lực trong 30 phút; khách hàng chuyển sang luồng nhân viên CSKH tự làm"

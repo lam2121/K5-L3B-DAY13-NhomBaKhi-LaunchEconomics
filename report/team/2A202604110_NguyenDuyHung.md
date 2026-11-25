@@ -6,7 +6,7 @@
 
 - Họ tên: Nguyễn Duy Hưng
 - MSSV: 2A202604110
-- Email: 
+- Email: nguyenduyhung101010@gmail.com
 - GitHub: Hungnd1208
 - Vai trong nhóm: **Người kiểm số (Thành viên 2)**
 
