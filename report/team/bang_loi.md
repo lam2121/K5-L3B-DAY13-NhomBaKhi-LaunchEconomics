@@ -6,30 +6,30 @@
 
 Người gắn nhãn 1: Phạm Văn Chiêu (đã duyệt bộ nhãn có hỗ trợ AI) · Người gắn nhãn 2: Nguyễn Văn Lâm (bộ nhãn đã ghi trong repo).
 
-Bảng dưới dùng để thảo luận các ca lệch. Tỷ lệ đồng thuận chính thức cần hai bộ nhãn gốc được làm độc lập trong 8 phút.
+Cột nhãn thống nhất ghi kết quả đã chốt sau khi hai người trao đổi. Tỷ lệ đồng thuận chính thức cần hai bộ nhãn gốc được làm độc lập trong 8 phút.
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | Do người dùng | Có | ... |
-| 2 | Hệ thống | Hệ thống | Có | ... |
-| 3 | Ngữ cảnh | Hệ thống | Không | ... |
-| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | ... |
-| 5 | Ngầm | Ngầm | Có | ... |
-| 6 | Do người dùng | Ngữ cảnh | Không | ... |
-| 7 | Hệ thống | Hệ thống | Có | ... |
-| 8 | Hệ thống | Ngầm | Không | ... |
-| 9 | Do người dùng | Giới hạn hệ thống | Không | ... |
-| 10 | Ngữ cảnh | Ngữ cảnh | Có | ... |
-| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | ... |
-| 12 | Ngầm | Ngầm | Có | ... |
-| 13 | Giới hạn hệ thống | Hệ thống | Không | ... |
-| 14 | Do người dùng | Do người dùng | Có | ... |
-| 15 | Hệ thống | Hệ thống | Có | ... |
-| 16 | Ngữ cảnh | Ngữ cảnh | Có | ... |
-| 17 | Ngầm | Ngầm | Có | ... |
-| 18 | Ngữ cảnh | Ngữ cảnh | Có | ... |
-| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | ... |
-| 20 | Hệ thống | Hệ thống | Có | ... |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Hệ thống | Không | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Ngữ cảnh | Không | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Ngầm | Không | Hệ thống |
+| 9 | Do người dùng | Giới hạn hệ thống | Không | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Hệ thống | Không | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
 **Tỉ lệ trùng khi đối chiếu tham khảo:** 15 / 20 = 75% (lệch ở ca 3, 6, 8, 9 và 13).
 
@@ -39,19 +39,19 @@ Bảng dưới dùng để thảo luận các ca lệch. Tỷ lệ đồng thu�
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- Ca 3 — Đề xuất phân biệt Ngữ cảnh với Hệ thống bằng cách kiểm tra trợ lý có hoàn đúng kênh quy định hay đã chọn sai kênh.
-- Ca 6 — Đề xuất xem khách chọn nhầm luồng hay luồng được chọn đúng nhưng giả định của hệ thống chưa khớp tình huống.
-- Ca 8 — Đề xuất tách việc dẫn sai điều khoản khỏi câu hỏi lỗi lộ ngay hay chỉ được phát hiện khi kiểm tra sau.
-- Ca 9 — Đề xuất xem khách có thể sửa mã nhập sang loại hợp lệ hay yêu cầu vẫn vượt khả năng tra cứu khi mã đã đúng.
-- Ca 13 — Đề xuất phân biệt yêu cầu ngoài phạm vi bảo hiểm với cách trợ lý phản hồi sai khi gặp yêu cầu ngoài phạm vi.
+- Ca 3 — Phân biệt Ngữ cảnh với Hệ thống bằng cách kiểm tra trợ lý có hoàn đúng kênh quy định hay đã chọn sai kênh.
+- Ca 6 — Xem khách chọn nhầm luồng hay luồng được chọn đúng nhưng giả định của hệ thống chưa khớp tình huống.
+- Ca 8 — Tách việc dẫn sai điều khoản khỏi câu hỏi lỗi lộ ngay hay chỉ được phát hiện khi kiểm tra sau.
+- Ca 9 — Xem khách có thể sửa mã nhập sang loại hợp lệ hay yêu cầu vẫn vượt khả năng tra cứu khi mã đã đúng.
+- Ca 13 — Phân biệt yêu cầu ngoài phạm vi bảo hiểm với cách trợ lý phản hồi sai khi gặp yêu cầu ngoài phạm vi.
 
-Hai người gắn nhãn sẽ xác nhận quy tắc và điền nhãn thống nhất sau khi trao đổi.
+Hai người gắn nhãn đã chốt giữ nhãn ở cột Người 1 cho năm ca lệch.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
 Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
 
-Bản nháp dùng năm ca có cùng nhãn trong lần đối chiếu. Nhóm sẽ rà lại cách đo và người phụ trách khi chốt.
+Hai người gắn nhãn đã duyệt bảng khắc phục cho năm ca có cùng nhãn trong lần đối chiếu.
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
