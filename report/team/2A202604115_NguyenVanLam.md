@@ -4,7 +4,7 @@
 
 - Họ tên: Nguyễn Văn Lâm
 - MSSV: 2A202604115
-- Email: nvl21122003@gmail.com
+- Email: 26ai.lamnv@vinuni.edu.vn
 - Vai trong nhóm: Người gắn nhãn 2, kiêm giữ hồ sơ (Trưởng nhóm)
 
 ## 2. Phần việc phụ trách

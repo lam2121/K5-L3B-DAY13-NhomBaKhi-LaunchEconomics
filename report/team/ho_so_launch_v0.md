@@ -10,7 +10,7 @@ Nhóm: NhomBaKhi · Lớp: L3B
 | 2 · Ba yếu tố nhạy nhất | 1. Số ca làm lại (`+51,8%` lên `6.787 đ` khi ×2; `−25,9%` khi ÷2) · 2. Tỉ lệ xem lại (`+40,7%` lên `6.292 đ` khi ×2; `−20,3%` khi ÷2) · 3. Lương nhân viên (`+23,1%` lên `5.506 đ` khi +25%) (`simulated`). Giá token ít nhạy (`+5,6%`). Giới hạn 2 lần chạy rẻ nhất toàn hệ thống (`6.901.220 đ`, `simulated`). | Giả lập | Trưởng nhóm CSKH |
 | 3 · So với nhân viên tự làm | Baseline NV tự làm: `12.000 đ/yc`. Cả hệ thống hiện tại (gồm `222` ca không thành công): `5.865 đ/yc = 0,49×`; phạm vi `noi_dia + hang_nang` sau cố định: `0,38×` ở 45k yc (`0,48×` ở nửa khối lượng) (`simulated`). **Rủi ro B4:** nếu xem lại 100%, CPS lên `11.743 đ = 0,98×` (9 phút làm lại) hoặc `12.415 đ = 1,03×` (mức thực tế `15,3` phút/ca, `simulated`). | Giả lập | Kế toán trưởng |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | ... | ... | ... |
-| 5 · Bảng lỗi và cách khắc phục | ... | ... | ... |
+| 5 · Bảng lỗi và cách khắc phục | Chốt `20/20` ca vào `5` loại PAIR (đồng thuận ban đầu `15/20 = 75%`, lệch ca `3, 6, 8, 9, 13` đã viết quy tắc phân biệt và thống nhất `20/20`); lập bảng khắc phục `5` ca (`1, 7, 16, 11, 5`) có event/đối soát đo được và vai trò phụ trách. | Xong, có bằng chứng | Kỹ sư trưởng agent |
 | 6 · Pilot plan | ... | ... | ... |
 | 7 · Rủi ro kinh tế | ... | ... | ... |
 
