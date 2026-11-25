@@ -87,7 +87,7 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
-- Duyệt bộ nhãn tham khảo, đối chiếu 20 ca với Người gắn nhãn 2 và chuẩn bị bản nháp quy tắc phân biệt cùng bảng khắc phục CP3.
+- Duyệt bộ nhãn tham khảo, đối chiếu 20 ca với Người gắn nhãn 2 và thống nhất nhãn cho các ca lệch và duyệt bảng khắc phục CP3 cùng Người gắn nhãn 2.
 
 ### Bằng chứng
 
